@@ -171,21 +171,21 @@ Benchmark instances (mknapcb*) must be placed inside the `/data` folder.
 
 ## Repository
 
-├── Problem1_ACO_BinPacking/
-│   ├── data
-│   └── aco notebook
+├── Problem1_ACO_BinPacking/ <br/>
+│   ├── data <br/>
+│   └── aco notebook <br/>
 
-├── Problem3_Bees_Knapsack/
-│   ├── data
-│   └── bees knapsack notebook
+├── Problem3_Bees_Knapsack/ <br/>
+│   ├── data <br/>
+│   └── bees knapsack notebook <br/>
 
-├── Problem4_AIS_SpamDetection/
-│   ├── data
-│   └── nsa notebook
+├── Problem4_AIS_SpamDetection/ <br/>
+│   ├── data <br/>
+│   └── nsa notebook <br/>
 
-├── Problem5_RL_WarehouseRobot/
-│   ├── data
-│   └── q learning notebook
+├── Problem5_RL_WarehouseRobot/ <br/>
+│   ├── data <br/>
+│   └── q learning notebook <br/>
 └── README.md
 
 
