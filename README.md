@@ -6,197 +6,76 @@
 This repository contains four implemented problems from the **Final Group Project 2025**.  
 Each problem applies an algorithm studied in **ACIT 4610 -Evolutionary artificial intelligence and robotics** to a practical or benchmark scenario.
 
----
-
-## **Problem 1 – One-Dimensional Bin Packing Using Ant Colony Optimization (ACO)**
-
-This module applies **Ant Colony Optimization (ACO)** to the **One-Dimensional Bin Packing Problem**.  
-The objective is to minimize the number of boxes required to pack items without exceeding capacity.
-
-Each “ant” constructs a packing solution guided by pheromone trails and heuristic desirability (tight fit).  
-Performance is measured by the number of boxes used, total unused space, and runtime.
-
-### **Data Source**
-[OR-Library Bin Packing Instances](https://people.brunel.ac.uk/~mastjjb/jeb/orlib/binpackinfo.html)
-Files in use:
-* binpack1–8
-
-### **Implementation Details**
-* ACO formulation with pheromone updates and heuristic weights.
-* Evaluation metrics: number of boxes, unused space, and runtime.
-* Convergence and load distribution plots.
-
-### **Run Instructions**
-
-* Open the notebook:
-ACO notebook
-
-Run all cells from top to bottom.  
-Benchmark instances (binpack1–8) must be placed inside the `/data` folder.
-
-* Then run all cells.
-
-
-### Parameter sets:
-
-1. **Balanced:**
-* n = 80
-* nb = 20
-* ne = 5
-* nre = 15
-* nrb = 7
-* ngh = 3
-* stlim = 25
-* max_iter = 500
-
-
-2. **Exploration:**
-* n = 100
-* nb = 20
-* ne = 5
-* nre = 15
-* nrb = 15
-* ngh = 8
-* stlim = 25
-* max_iter = 500
-
-
-3. **Exploitation:**
-* n = 60
-* nb = 20
-* ne = 5
-* nre = 25
-* nrb = 7
-* ngh = 3
-* stlim = 25
-* max_iter = 500
-
-
----
-
-## Problem 3 – 0–1 Knapsack Problem Using Bees Algorithm (BA)
-
-Implements the Bees Algorithm (BA) to solve the 0–1 Knapsack Problem, maximizing total value within a given weight limit.
-Neighborhood search is guided by elite sites and recruited bees.
-
-### Objectives:
-* Maximize total item value.
-* Maintain feasibility (total weight ≤ W).
-
-### **Data Source**
-[OR-Library Knapsack Instances](https://people.brunel.ac.uk/~mastjjb/jeb/orlib/mknapinfo.html)
-Files in use:
-* mknapcb1
-* mknapcb2
-* mknapcb4
-* mknapcb5
-* mknapcb8
-* mknapcb9
-
-### **Implementation Details**
-* Search agents represent candidate knapsack solutions.
-* Feasibility repair mechanism.
-* Convergence plots and multi-run statistics.
-
-### **Run Instructions**
-Open the notebook:
-Knapsack notebook
-
-Run all cells from top to bottom.  
-Benchmark instances (mknapcb*) must be placed inside the `/data` folder.
-
-### **Parameter Sets**
-
-1. **Balanced**
-* alpha = 1.2
-* beta = 3.0
-* rho = 0.10
-* Q = 1200
-* ants = 20
-* iters = 150
-
-
-
-2. **Exploration**
-* alpha = 0.8
-* beta = 3.5
-* rho = 0.20
-* Q = 800
-* ants = 30
-* iters = 200
-
-
-3. **Exploitation**
-* alpha = 1.5
-* beta = 2.0
-* rho = 0.05
-* Q = 2000
-* ants = 15
-* iters = 250
-
-
---- 
-
-## Problem 4 – Spam Detection Using Artificial Immune Systems (AIS: Negative Selection Algorithm)
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Problem 5 – Reinforcement Learning (Q-Learning) for Warehouse Robot Navigation
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Repository
 
-├── Problem1_ACO_BinPacking/ <br/>
+├── Project_1<br/>
+│   ├── README <br/>
+│   ├── data <br>
+│   │   ├── binpack1 <br/>
+│   │   ├── binpack2 <br/>
+│   │   ├── binpack3 <br/>
+│   │   ├── binpack4 <br/>
+│   │   ├── binpack5 <br/>
+│   │   ├── binpack6 <br/>
+│   │   ├── binpack7 <br/>
+│   │   └── binpack8 <br/>
+│   └── ACO_binpacking <br/>
+├── Project_3 <br/>
+│   ├── README <br/>
 │   ├── data <br/>
-│   └── aco notebook <br/>
-
-├── Problem3_Bees_Knapsack/ <br/>
+│   │   ├── mknapcb1 <br/>
+│   │   ├── mknapcb2 <br/>
+│   │   ├── mknapcb4 <br/>
+│   │   ├── mknapcb5 <br/>
+│   │   ├── mknapcb8 <br/>
+│   │   ├── mknapcb9 <br/>
+│   └── BA_Knapsack <br/>
+├── Project_4 <br/>
+│   ├── README <br/>
 │   ├── data <br/>
-│   └── bees knapsack notebook <br/>
+│   │   └── SMSSpamCollection <br/>
+│   ├── models <br/>
+│   │   └──tfidf_vectorizer <br/>
+│   ├── notebook <br/>
+│   │   └──feature_engineering <br/>
+│   └── report_reference <br/>
+├── Project_5 <br/>
+│   ├── notebook <br/>
+│   │   └──feature_engineering <br/>
+│   ├── src <br/>
+│   │   ├── \__init__ <br/>
+│   │   ├── qlearning_agent <br/>
+│   │   └── utils <br/>
+│   ├── README <br/>
+│   ├── report_reference <br/>
+│   └── requirements <br/>
+├── Final Group Projct 2025 <br/>
+└── README.md <br/>
 
-├── Problem4_AIS_SpamDetection/ <br/>
-│   ├── data <br/>
-│   └── nsa notebook <br/>
 
-├── Problem5_RL_WarehouseRobot/ <br/>
-│   ├── data <br/>
-│   └── q learning notebook <br/>
-└── README.md
+---
+## Task descriptions:
 
+### **Problem 1 – One-Dimensional Bin Packing Using Ant Colony Optimization (ACO)**
+
+This problem applies Ant Colony Optimization to the 1-D bin packing challenge, where items must be assigned to bins without exceeding capacity. Ants create packing solutions using pheromone trails and a tight-fit heuristic. The objective is to reduce the number of boxes while maintaining feasibility, with OR-Library benchmark instances used for evaluation.
 
 
+### Problem 3 – 0–1 Knapsack Problem Using Bees Algorithm (BA)
+
+This problem uses the Bees Algorithm to optimise item selection under a weight constraint while maximising total value. The approach explores and improves solutions using scout bees, elite sites, neighbourhood searches, and recruited bees. Performance is evaluated using OR-Library knapsack instances of varied sizes.
 
 
+### Problem 4 – Spam Detection Using Artificial Immune Systems (AIS) - Negative Selection Algorithm(NSA)
+This problem applies the Negative Selection Algorithm to detect spam SMS messages. The model only learns from ham ("self") messages and creates detectors for "non-self" patterns (spam). On the SMS Spam Collection v1 dataset, messages are encoded in char-level TF-IDF, binarized, and assessed for accuracy, recall, and F1-score.
 
 
+### Problem 5 – Reinforcement Learning (Q-Learning) for Warehouse Robot Navigation
+This problem trains a Q-learning agent to navigate the FrozenLake-v1 environment, simulating a warehouse robot moving across a slippery floor. Experiments are conducted on 4×4 and 8×8 maps, testing multiple ε-decay strategies and hyperparameters, and results are compared against random and heuristic baselines.
 
 
-
+---
 
 ## Contribution:
 The group was divided into two sub-teams to work efficiently on the four assigned problems:
