@@ -8,50 +8,49 @@ Each problem applies an algorithm studied in **ACIT 4610 -Evolutionary artificia
 
 
 ## Repository
-
-├── Project_1<br/>
-│   ├── README <br/>
-│   ├── data <br>
-│   │   ├── binpack1 <br/>
-│   │   ├── binpack2 <br/>
-│   │   ├── binpack3 <br/>
-│   │   ├── binpack4 <br/>
-│   │   ├── binpack5 <br/>
-│   │   ├── binpack6 <br/>
-│   │   ├── binpack7 <br/>
-│   │   └── binpack8 <br/>
-│   └── ACO_binpacking <br/>
-├── Project_3 <br/>
-│   ├── README <br/>
-│   ├── data <br/>
-│   │   ├── mknapcb1 <br/>
-│   │   ├── mknapcb2 <br/>
-│   │   ├── mknapcb4 <br/>
-│   │   ├── mknapcb5 <br/>
-│   │   ├── mknapcb8 <br/>
-│   │   ├── mknapcb9 <br/>
-│   └── BA_Knapsack <br/>
-├── Project_4 <br/>
-│   ├── README <br/>
-│   ├── data <br/>
-│   │   └── SMSSpamCollection <br/>
-│   ├── models <br/>
-│   │   └──tfidf_vectorizer <br/>
-│   ├── notebook <br/>
-│   │   └──feature_engineering <br/>
-│   └── report_reference <br/>
-├── Project_5 <br/>
-│   ├── notebook <br/>
-│   │   └──feature_engineering <br/>
-│   ├── src <br/>
-│   │   ├── \__init__ <br/>
-│   │   ├── qlearning_agent <br/>
-│   │   └── utils <br/>
-│   ├── README <br/>
-│   ├── report_reference <br/>
-│   └── requirements <br/>
-├── Final Group Projct 2025 <br/>
-└── README.md <br/>
+* Project_1
+    * README
+    * data
+        * binpack1
+        * binpack2
+        * binpack3
+        * binpack4
+        * binpack5
+        * binpack6
+        * binpack7
+        * binpack8
+    * ACO_binpacking
+* Project_3
+    * README
+    * data
+        * mknapcb1
+        * mknapcb2
+        * mknapcb4
+        * mknapcb5
+        * mknapcb8
+        * mknapcb9
+    * BA_Knapsack
+* Project_4
+    * README
+    * data
+        * SMSSpamCollection
+        * models
+        * tfidf_vectorizer
+    * notebook
+        * feature_engineering
+        * report_reference
+* Project_5
+    * notebook
+        * feature_engineering
+    * src
+        * \__init__
+        * qlearning_agent
+        * utils
+    * README
+    * report_reference
+    * requirements
+* Final Group Projct 2025
+* README.md
 
 
 ---
