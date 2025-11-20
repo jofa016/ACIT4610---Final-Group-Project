@@ -19,16 +19,23 @@ Files in use:
 * mknapcb9
 
 ## Repository:
-└── Project_3 <br/>
-    ├── README <br/>
-    ├── data <br/>
-    │   ├── mknapcb1 <br/>
-    │   ├── mknapcb2 <br/>
-    │   ├── mknapcb4 <br/>
-    │   ├── mknapcb5 <br/>
-    │   ├── mknapcb8 <br/>
-    │   ├── mknapcb9 <br/>
-    └── BA_Knapsack <br/>
+```
+Project_3_Knapsack
+│
+├── data/
+│   ├── mknapcb1.txt 
+│   ├── mknapcb2.txt
+│   ├── mknapcb4.txt
+│   ├── mknapcb5.txt
+│   ├── mknapcb8.txt
+│   └── mknapcb9.txt
+│
+├── notebook/
+│   └── BA_Knapsack
+│
+├── README.md
+└── requirements.txt
+```
 
 ## Requirements:
 * Python 3.8+
