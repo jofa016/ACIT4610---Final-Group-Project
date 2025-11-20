@@ -8,50 +8,65 @@ Each problem applies an algorithm studied in **ACIT 4610 -Evolutionary artificia
 
 
 ## Repository
-* Project_1
-    * README
-    * data
-        * binpack1
-        * binpack2
-        * binpack3
-        * binpack4
-        * binpack5
-        * binpack6
-        * binpack7
-        * binpack8
-    * ACO_binpacking
-* Project_3
-    * README
-    * data
-        * mknapcb1
-        * mknapcb2
-        * mknapcb4
-        * mknapcb5
-        * mknapcb8
-        * mknapcb9
-    * BA_Knapsack
-* Project_4
-    * README
-    * data
-        * SMSSpamCollection
-        * models
-        * tfidf_vectorizer
-    * notebook
-        * feature_engineering
-        * report_reference
-* Project_5
-    * notebook
-        * feature_engineering
-    * src
-        * \__init__
-        * qlearning_agent
-        * utils
-    * README
-    * report_reference
-    * requirements
-* Final Group Projct 2025
-* README.md
-
+```
+├── Project_1_Bin_Packing/
+│   ├── data/
+│   │   ├── binpack1.txt
+│   │   ├── binpack2.txt
+│   │   ├── binpack3.txt
+│   │   ├── binpack4.txt
+│   │   ├── binpack5.txt
+│   │   ├── binpack6.txt
+│   │   ├── binpack7.txt
+│   │   └── binpack8.txt
+│   ├── notebook/
+│   │   └──ACO_binpacking
+│   │
+│   ├── README
+│   └── requirements
+│
+├── Project_3_Knapsack/ 
+│   ├── data/
+│   │   ├── mknapcb1.txt 
+│   │   ├── mknapcb2.txt
+│   │   ├── mknapcb4.txt
+│   │   ├── mknapcb5.txt
+│   │   ├── mknapcb8.txt
+│   │   └── mknapcb9.txt
+│   ├── notebook/
+│   │   └──BA_Knapsack
+│   │
+│   ├── README
+│   └── requirements
+│
+├── Project_4_spam_detection/
+│   │
+│   ├── data/
+│   │   ├── readme
+│   │   └── SMSSpamCollection
+│   │   
+│   ├── notebook/
+│   │   └── BA_Knapsack
+│   │
+│   ├── README.md
+│   └── requirements.txt
+│
+├── Project_5_warehouse_robot/
+│   ├── notebook/
+│   │   └──feature_engineering
+│   │
+│   ├── src>
+│   │   ├── __init__ 
+│   │   ├── qlearning_agent
+│   │   └── utils
+│   │
+│   ├── README 
+│   ├── report_reference 
+│   └── requirements
+│
+├──Final Group Projct 2025
+└──README.md
+```
 
 ---
 ## Task descriptions:

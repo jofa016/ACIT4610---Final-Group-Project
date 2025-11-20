@@ -20,15 +20,20 @@ Spam Collection Original dataset can be found at: <br/>
 
 
 ## Repository:
-Project_4 <br/>
-   ├── README <br/>
-   ├── data <br/>
-   │   ├── readme <br/>
-   │   └── SMSSpamCollection <br/>
-   ├── models <br/>
-   │   └──tfidf_vectorizer <br/>
-   ├── notebook <br/>
-   └── report_reference <br/>
+```
+Project_4_spam_detection
+│
+├── data
+│   ├── readme
+│   └── SMSSpamCollection
+│   
+├── notebook/
+│   └── BA_Knapsack
+│
+├── README.md
+└── requirements.txt
+```
+
 
 ## Requirements:
 * Python 3.8+

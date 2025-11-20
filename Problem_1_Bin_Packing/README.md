@@ -22,18 +22,25 @@ Files in use:
 These files should be placed in the local `data/` folder for Project 1.
 
 ## Content:
-Project_1<br/>
-    ├── README.md <br/>
-    ├── data <br>
-    │   ├── binpack1 <br/>
-    │   ├── binpack2 <br/>
-    │   ├── binpack3 <br/>
-    │   ├── binpack4 <br/>
-    │   ├── binpack5 <br/>
-    │   ├── binpack6 <br/>
-    │   ├── binpack7 <br/>
-    │   └── binpack8 <br/>
-    └── ACO_binpacking <br/>
+```
+Project_1_Bin_Packing/
+│
+├── data/
+│   ├── binpack1.txt
+│   ├── binpack2.txt
+│   ├── binpack3.txt
+│   ├── binpack4.txt
+│   ├── binpack5.txt
+│   ├── binpack6.txt
+│   ├── binpack7.txt
+│   └── binpack8.txt
+│
+├── notebook/    
+│   └── ACO_binpacking.ipynb
+│
+├── README.md
+└── requirements.txt
+```
 
 
 ## Requirements:
@@ -62,10 +69,7 @@ pip install numpy pandas matplotlib seaborn ipython
 ## **Quick start**
 1. Ensure the OR-library bin-packing files (binpack1–binpack8) are placed in: `Project_1/data/`
 2. Open the notebook: `ACO_BinPacking.ipynb`
-3. Run all cells from top to bottom.  <br/>
-
-
-* Then run all cells.
+3. Run all cells from top to bottom.
 
 
 ## Parameter sets:
