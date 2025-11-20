@@ -45,6 +45,11 @@ Project_1_Bin_Packing/
 
 ## Requirements:
 * Python 3.8+
+* Libraries:
+    * numpy
+    * pandas
+    * matplotlib
+    * seaborn
 
 Libraries to install:
 ```sh
