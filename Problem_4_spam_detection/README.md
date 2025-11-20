@@ -43,7 +43,7 @@ Project_4_spam_detection
 
 Install(local):
 ```sh
-pip install numpy pandas matplotlib seaborn
+pip install requirements.txt
 ```
 
 ## **Implementation Details**

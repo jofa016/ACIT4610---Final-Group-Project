@@ -47,7 +47,7 @@ Project_3_Knapsack
 
 Install(local):
 ```sh
-pip install numpy pandas matplotlib seaborn
+pip install requirements.txt
 ```
 
 ## **Implementation Details**

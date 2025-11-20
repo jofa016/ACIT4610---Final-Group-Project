@@ -48,7 +48,7 @@ Project_1_Bin_Packing/
 
 Libraries to install:
 ```sh
-pip install numpy pandas matplotlib seaborn ipython
+pip install requirements.txt
 ```
 
 ## **Implementation Details**
