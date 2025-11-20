@@ -111,34 +111,34 @@ pip install numpy pandas matplotlib seaborn ipython
 ## Parameter sets:
 
 1. **Balanced:**
-* n = 80 (number of scout ants)
-* nb = 20 (number of best sites)
-* ne = 5 (number of elite sites)
-* nre = 15 (recruited ants around elite sites)
-* nrb = 7 (recruited ants around other best sites)
-* ngh = 3 (neighbourhood size)
-* stlim = 25 (stagnation limit)
-* max_iter = 500 (maximum iterations)
+    * n = 80 (number of scout ants)
+    * nb = 20 (number of best sites)
+    * ne = 5 (number of elite sites)
+    * nre = 15 (recruited ants around elite sites)
+    * nrb = 7 (recruited ants around other best sites)
+    * ngh = 3 (neighbourhood size)
+    * stlim = 25 (stagnation limit)
+    * max_iter = 500 (maximum iterations)
 
 
 2. **Exploration:**
-* n = 100
-* nb = 20
-* ne = 5
-* nre = 15
-* nrb = 15
-* ngh = 8
-* stlim = 25
-* max_iter = 500
+    * n = 100
+    * nb = 20
+    * ne = 5
+    * nre = 15
+    * nrb = 15
+    * ngh = 8
+    * stlim = 25
+    * max_iter = 500
 
 
 3. **Exploitation:**
-* n = 60
-* nb = 20
-* ne = 5
-* nre = 25
-* nrb = 7
-* ngh = 3
-* stlim = 25
-* max_iter = 500
+    * n = 60
+    * nb = 20
+    * ne = 5
+    * nre = 25
+    * nrb = 7
+    * ngh = 3
+    * stlim = 25
+    * max_iter = 500
 
