@@ -52,17 +52,53 @@ pip install numpy pandas matplotlib seaborn ipython
 ```
 
 ## **Implementation Details**
-* Ant Colony Optimization formulation:
-    * Pheromone matrix over item–position choices.
-    * Heuristic preference for tighter fits (minimising leftover space).
-    * Probabilistic solution construction for each ant per iteration.
-* Pheromone update:
-    * Evaporation plus reinforcement from best solutions.
-* Evaluation:
-    * Number of bins used.
-    * Total unused capacity across all bins.
-    * Runtime per parameter set.
-    * Optional plots of convergence and load distribution.
+1. Dataset Parsing (Beasley OR-Library)
+    * Use first instance from: binpack1, 2, 3, 4, 5, 6, 7, 8
+    * Extract:
+        * bin capacity → C
+        * item sizes → w
+        * known optimal bins → opt_bins
+    * Store as pandas.DataFrame with attributes (n_items, capacity, opt_bins).
+
+2. Problem Setup (1-D Bin Packing)
+    * Items: integer sizes w_i.
+    * Capacity: C.
+    * Objective: minimize number of bins; tie-break by unused space.
+    * Feasible solutions generated using a tight-fit decoder.
+
+3. ACO Parameters
+    * alpha, beta, rho, Q, ants, iters, seed, stlim
+    * Parameter sets: balanced, exploration, exploitation.
+
+4. ACO Algorithm (aco_binpack)
+    * Pheromone matrix tau[n × n].
+    * Heuristic: larger items favored (`eta = (w/C)^beta`).
+    * Each ant builds a permutation using `P(j) ∝ tau[a,j]^alpha · eta[j]^beta.`
+    * Decode with tight-fit → bins + loads → cost.
+    * Adaptive evaporation + rank-based, normalized deposit.
+    * Tracks history_best, history_mean, tau_std.
+    * Early stopping on stagnation.
+
+5. Experiment Runner (run_experiments)
+    * Runs all instances × param sets × multiple seeds.
+    * Logs:
+        * best_cost, num_bins, unused_capacity, runtime_s, history_best, history_mean, tau_std.
+    * Writes aggregated results to results.csv.
+
+6. Post-Processing
+    * Parse histories from CSV.
+    * Add metadata + metrics:
+        * opt_bins, gap_to_opt (%),
+        * load_efficiency,
+        * exploration_decay (pheromone-std drop).
+    * Expand tau_std per iteration for exploration tracking.
+
+7. Evaluation
+    * Summary tables (mean across runs).
+    * Convergence curves.
+    * Load-distribution analysis.
+    * Heatmaps of load_efficiency & gap_to_opt.
+    * Exploration–exploitation dynamics (tau_std, smoothed curves).
 
 
 

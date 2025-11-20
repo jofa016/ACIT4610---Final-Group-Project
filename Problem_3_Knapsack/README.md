@@ -51,13 +51,55 @@ pip install numpy pandas matplotlib seaborn
 ```
 
 ## **Implementation Details**
-* Candidate solutions are encoded as binary vectors indicating item selection.
-* Bees Algorithm components:
-    * Scout bees explore new random solutions.
-    * Elite and selected sites receive more recruited bees for local neighbourhood search.
-    * Neighbourhood search flips item-selection bits to refine high-quality solutions.
-* Feasibility repair is applied to ensure the total weight does not exceed capacity.
-* Multiple runs and convergence plots are used to analyse stability and performance.
+1. Dataset Parsing (Beasley OR-Library)
+    * Use first instance from: mknapcb1, 2, 4, 5, 8, 9
+    * Extract:
+        * profits → values
+        * weight matrix → W
+        * capacities → b
+    * Store as pandas.DataFrame with attributes (n, m, capacities).
+
+2. Problem Setup (MKP)
+    * Binary decision vector x ∈ {0,1}^n
+    * Objective: maximize values @ x
+    * Constraints: W @ x <= b (multi-constraint knapsack)
+
+3. Bees Algorithm (BA)
+    * Initial population: n random binary solutions
+    * Evaluate via profit; repair infeasible solutions
+    * Best sites:
+        * nb best, ne elite
+        * Explore neighbours by flipping ≤ ngh bits
+        * Keep best neighbour per site
+    * Scouts refill remaining population
+    * Early stop when no improvement for stlim iterations
+
+4. Repair Strategy
+    * If W @ x > b:
+    * compute profit_per_density = profit / normalized_weight
+    * iteratively drop items with lowest ratio
+    * stop when feasible
+
+5. Parameter Sets
+    * Balanced: moderate scouts + neighbourhood size
+    * Exploration: larger neighbourhood + more recruits
+    * Exploitation: more elite recruits, smaller neighbourhood
+
+6. Experiments
+    * Instances: 6 datasets × 3 parameter sets
+    * Seeds: 10 runs each
+    * Logged metrics:
+        * Baseline_Best, Best_Value, Improvement
+        * Deviation_% vs known optimum
+        * Runtime_s, Iterations, Iter_of_Best
+        * Convergence curves (Hist_Best, Hist_Avg)
+
+7. Evaluation
+    * Aggregated summary tables
+    * Heatmaps (improvement, deviation)
+    * Convergence plots
+    * Runtime analysis & runtime–quality scatterplots
+
 
 
 ## **Quick start**
@@ -70,34 +112,34 @@ pip install numpy pandas matplotlib seaborn
 ## Parameter sets:
 
 1. **Balanced:**
-* n = 80 (number of scout ants)
-* nb = 20 (number of best sites)
-* ne = 5 (number of elite sites)
-* nre = 15 (recruited ants around elite sites)
-* nrb = 7 (recruited ants around other best sites)
-* ngh = 3 (neighbourhood size)
-* stlim = 25 (stagnation limit)
-* max_iter = 500 (maximum iterations)
+    * n = 80 (number of scout ants)
+    * nb = 20 (number of best sites)
+    * ne = 5 (number of elite sites)
+    * nre = 15 (recruited ants around elite sites)
+    * nrb = 7 (recruited ants around other best sites)
+    * ngh = 3 (neighbourhood size)
+    * stlim = 25 (stagnation limit)
+    * max_iter = 500 (maximum iterations)
 
 
 2. **Exploration:**
-* n = 100
-* nb = 20
-* ne = 5
-* nre = 15
-* nrb = 15
-* ngh = 8
-* stlim = 25
-* max_iter = 500
+    * n = 100
+    * nb = 20
+    * ne = 5
+    * nre = 15
+    * nrb = 15
+    * ngh = 8
+    * stlim = 25
+    * max_iter = 500
 
 
 3. **Exploitation:**
-* n = 60
-* nb = 20
-* ne = 5
-* nre = 25
-* nrb = 7
-* ngh = 3
-* stlim = 25
-* max_iter = 500
+    * n = 60
+    * nb = 20
+    * ne = 5
+    * nre = 25
+    * nrb = 7
+    * ngh = 3
+    * stlim = 25
+    * max_iter = 500
 

@@ -47,6 +47,71 @@ pip install numpy pandas matplotlib seaborn
 ```
 
 ## **Implementation Details**
+Implementation Details
+1. Data Processing
+    * Clean text:
+        * lowercase
+        * replace URLs → <URL>
+        * replace emails → <EMAIL>
+        * remove HTML tags & symbols
+        * collapse whitespace
+    * Encode labels:
+        * `ham = 0`, `spam = 1`
+
+
+2. Train / Validation / Test Split
+| Set        | Ham  | Spam |
+| ---------- | ---- | ---- |
+| Train      | 2895 | 0    |
+| Validation | 965  | 373  |
+| Test       | 965  | 374  |
+
+
+3. Vectorization
+    * Method: Character-level TF–IDF
+    * Settings:
+```
+analyzer = "char_wb"
+ngram_range = (3, 5)
+max_df = 0.95
+min_df = 2
+sublinear_tf = True
+```
+
+4. Binarization
+    * Convert TF-IDF to binary:
+```
+tau = 0.01
+X_bin = (X >= tau).astype(uint8)
+
+```
+
+5. Negative Selection Algorithm (NSA)
+    * VDetectorNSA_Binary implementation:
+        * antiprofile sampling (rare ham features more likely)
+        * sparse overlap computation
+    * detector accepted if:
+        * `max_overlap_with_ham` < `radius`
+    * Final hyper parameters:
+
+```
+k = 29                     # active bits per detector
+r_min = 1
+r_max = 3
+max_detectors = 4000
+max_tries = 100000
+batch_size = 1000
+sampling = "antiprofile"
+random_state = 42
+k_hits = 2                 # decision threshold
+```
+
+6. Evaluation Metrics
+    * Precision, Recall, F1, Accuracy
+    * PR–AUC
+    * Confusion Matrix
+    * KDE detector-hit distributions
+    * Coverage (ham vs spam)
 
 
 
