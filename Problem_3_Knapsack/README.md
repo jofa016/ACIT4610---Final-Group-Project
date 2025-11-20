@@ -103,7 +103,7 @@ pip install requirements.txt
 
 
 ## **Quick start**
-1. Ensure the OR-library knapsack files (mknapcb*) are placed in: `Project_3/data/Knapsack/`
+1. Ensure the OR-library knapsack files (mknapcb*) are placed in: `Project_3/data/`
 2. Open the notebook: `BA_Knapsack.ipynb`
 3. Run all cells from top to bottom.  <br/>
 
